@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: SpringConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          label: master
+          uri: https://github.com/sivagandhi1993/SpringConfigServer.git
+          username: sivagandhi1993
+          password: Rakasi@1993
+          search-paths:
+            - springwebflux
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        includes: "*"
