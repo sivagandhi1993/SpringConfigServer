@@ -1,14 +1,19 @@
-info:
-  component: Config Server
 spring:
   application:
-    name: configserver
+    name: SpringConfigServer
   cloud:
     config:
       server:
         git:
-          uri: http://localhost:8080/v1/items
+          uri: https://github.com/sivagandhi1993/SpringConfigServer.git
+          search-paths:
+            - learn-reactivespring
 server:
   port: 8888
 management:
-  context_path: /admin
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        includes: "*"
