@@ -1,0 +1,14 @@
+info:
+  component: Config Server
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://localhost:8080/v1/items
+server:
+  port: 8888
+management:
+  context_path: /admin
